@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Menu</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="hello_blank_fragment">Neret est gay</string>
+    <string name="Header_text">Menu</string>
+    <string name="search_your_recipes">Search Your Recipes…</string>
+    <string name="meal_categories">Meal Categories</string>
+    <string name="title_recyclerview">Liste</string>
+</resources>

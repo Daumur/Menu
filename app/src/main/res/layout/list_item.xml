@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="155dp"
+        android:layout_height="153dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/itemText"
+        android:layout_width="277dp"
+        android:layout_height="96dp"
+        android:layout_margin="50dp"
+        android:layout_weight="3"
+        android:fadeScrollbars="false"
+        android:text="New Text"
+        android:textAlignment="viewStart"
+        android:textSize="24sp" />
+
+</LinearLayout>
