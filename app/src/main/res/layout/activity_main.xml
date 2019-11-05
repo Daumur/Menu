@@ -31,12 +31,12 @@
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nvView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@android:color/white"
-            app:menu="@menu/drawer_view" />
+            android:id="@+id/nvView"
+            app:menu="@menu/drawer_view"/>
     </androidx.drawerlayout.widget.DrawerLayout>
 
 
