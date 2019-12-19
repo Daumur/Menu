@@ -1,8 +1,12 @@
 package com.example.menu;
 
+
 public class ModelListView {
 
-    private String name, country, city, imgURL;
+    private String name;
+    private String country;
+    private String city;
+    private String imgURL;
 
     public String getImgURL(){
         return imgURL;
