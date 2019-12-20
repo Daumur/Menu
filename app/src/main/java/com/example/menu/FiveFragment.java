@@ -34,8 +34,6 @@ public class FiveFragment extends Fragment {
 
     private final static int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 21;
     private GoogleMap mMap;
-    private Location mLastKnownLocation;
-
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private MapView map;
 
@@ -43,7 +41,6 @@ public class FiveFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_five, container, false);
 
         getLocationPermission();
@@ -60,21 +57,15 @@ public class FiveFragment extends Fragment {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 mMap = googleMap;
-                // Turn on the My Location layer and the related control on the map.
+
                 updateLocationUI();
 
-                // Get the current location of the device and set the position of the map.
                 getDeviceLocation();
             }
         });
     }
 
     private void getLocationPermission() {
-        /*
-         * Request location permission, so that we can get the location of the
-         * device. The result of the permission request is handled by a callback,
-         * onRequestPermissionsResult.
-         */
         if (ContextCompat.checkSelfPermission(getContext(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -114,7 +105,6 @@ public class FiveFragment extends Fragment {
             } else {
                 mMap.setMyLocationEnabled(false);
                 mMap.getUiSettings().setMyLocationButtonEnabled(false);
-                mLastKnownLocation = null;
                 getLocationPermission();
             }
         } catch ( SecurityException e ) {
@@ -123,10 +113,6 @@ public class FiveFragment extends Fragment {
     }
 
     private void getDeviceLocation() {
-        /*
-         * Get the best and most recent location of the device, which may be null in rare
-         * cases when a location is not available.
-         */
         try {
             if (mLocationPermissionGranted) {
                 Task<Location> locationResult = mFusedLocationProviderClient.getLastLocation();
@@ -134,8 +120,6 @@ public class FiveFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Location> task) {
                         if (task.isSuccessful()) {
-                            // Set the map's camera position to the current location of the device.
-                            mLastKnownLocation  = task.getResult();
                             mMap.moveCamera(CameraUpdateFactory
                                     .newLatLngZoom(mDefaultLocation, 14));
                         } else {
