@@ -12,28 +12,28 @@ import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<Chiens> values;
+    private List<Arme> values;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView txtHeader;
-        public TextView txtage;
-        public TextView txtrace;
+        public TextView txtName;
+        public TextView txtDiff;
+        public TextView txtType;
         public ImageView txtImage;
 
         public ViewHolder(View v) {
             super(v);
             txtImage = v.findViewById(R.id.item_image);
-            txtHeader = v.findViewById(R.id.item_titre);
-            txtage = v.findViewById(R.id.item_age);
-            txtrace = v.findViewById(R.id.item_race);
+            txtName = v.findViewById(R.id.item_name);
+            txtType = v.findViewById(R.id.item_type);
+            txtDiff = v.findViewById(R.id.item_diff);
         }
     }
 
-    public void add(int position, Chiens item) {
+    public void add(int position, Arme item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -44,7 +44,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    MyAdapter(List<Chiens> myDataset) {
+    MyAdapter(List<Arme> myDataset) {
         values = myDataset;
     }
 
@@ -61,11 +61,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Chiens chien = values.get(position);
-        Picasso.get().load(chien.getImgURL()).into(holder.txtImage);
-        holder.txtHeader.setText("Nom : " +chien.getName());
-        holder.txtage.setText("Age : " +chien.getage());
-        holder.txtrace.setText("Race : " +chien.getrace());
+        final Arme arme = values.get(position);
+        Picasso.get().load(arme.getImgURL()).into(holder.txtImage);
+        holder.txtName.setText("Nom : " + arme.getName());
+        holder.txtType.setText("Age : " + arme.getType());
+        holder.txtDiff.setText("Race : " + arme.getDifficulté());
 
     }
 

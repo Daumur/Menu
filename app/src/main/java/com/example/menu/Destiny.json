@@ -1,0 +1,20 @@
+[
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2018/10/GoAboutYourBusiness.jpg",
+    "name": "La belle affaire",
+    "difficulté": "Dropable",
+    "type": "Cinétique"
+  },
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2018/10/Catacombs-e1539685236787.jpg",
+    "name": "L'empereur des rats",
+    "difficulté": "Quêtes",
+    "type": "Cinétique"
+  },
+  {
+    "imgURL" : "https://www.bungie.net/common/destiny2_content/screenshots/1891561814.jpg",
+    "name": "Murmure du ver",
+    "difficulté": "Assault secret avec parcour",
+    "type": "Munitions Lourdes"
+  }
+]

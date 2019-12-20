@@ -26,18 +26,18 @@ import java.util.List;
 
 public class FourFragment extends Fragment {
 
-    private RecyclerView chienRecyclerView;
+    private RecyclerView armeRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    List<Chiens> chiensList = new ArrayList<>();
+    List<Arme> armeList = new ArrayList<>();
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_four, container, false);
 
-            chienRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+            armeRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
             appelAPI();
 
@@ -53,33 +53,33 @@ public class FourFragment extends Fragment {
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
             final API_REST response = retrofit.create(API_REST.class);
-            Call<List<Chiens>> call = (response).GetChien();
-            call.enqueue(new Callback<List<Chiens>>() {
+            Call<List<Arme>> call = (response).GetArme();
+            call.enqueue(new Callback<List<Arme>>() {
                 @Override
-                public void onResponse(Call<List<Chiens>> call, Response<List<Chiens>> response) {
-                    chiensList=response.body();
-                    creationList(chiensList);
+                public void onResponse(Call<List<Arme>> call, Response<List<Arme>> response) {
+                    armeList =response.body();
+                    creationList(armeList);
                 }
 
                 @Override
-                public void onFailure(Call<List<Chiens>> call, Throwable t) {
+                public void onFailure(Call<List<Arme>> call, Throwable t) {
                     Log.d("ERROR", "API ERROR");
                 }
             });
         }
 
-        void creationList(List<Chiens> chiensList) {
+        void creationList(List<Arme> armeList) {
 
 
-            Chiens chien = new Chiens();
-            chien.setName("Tweed");
-            chien.setage("4");
-            chien.setrace("Dalmatien");
+            Arme arme = new Arme();
+            arme.setName("Le fardeau d'Izanagi");
+            arme.setDifficulté("Quête");
+            arme.setType("Energétique");
 
             layoutManager = new LinearLayoutManager(getContext());
-            chienRecyclerView.setLayoutManager(layoutManager);
-            mAdapter = new MyAdapter(chiensList);
-            chienRecyclerView.setAdapter(mAdapter);
+            armeRecyclerView.setLayoutManager(layoutManager);
+            mAdapter = new MyAdapter(armeList);
+            armeRecyclerView.setAdapter(mAdapter);
 
 
         }

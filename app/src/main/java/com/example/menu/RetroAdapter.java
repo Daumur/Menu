@@ -68,9 +68,9 @@ public class RetroAdapter extends BaseAdapter {
         }
 
         Picasso.get().load(dataModelArrayList.get(position).getImgURL()).into(holder.iv);
-        holder.tvname.setText("Name: "+dataModelArrayList.get(position).getName());
-        holder.tvcountry.setText("Country: "+dataModelArrayList.get(position).getCountry());
-        holder.tvcity.setText("City: "+dataModelArrayList.get(position).getCity());
+        holder.tvname.setText("Nom : "+dataModelArrayList.get(position).getName());
+        holder.tvcountry.setText("Pays : "+dataModelArrayList.get(position).getCountry());
+        holder.tvcity.setText("Ville : "+dataModelArrayList.get(position).getCity());
 
         return convertView;
     }

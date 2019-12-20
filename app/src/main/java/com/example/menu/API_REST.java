@@ -7,8 +7,8 @@ import retrofit2.http.GET;
 
 public interface API_REST {
 
-    String URL = "https://raw.githubusercontent.com/hugomatt/ProgMobile/Developpe/app/";
+    String URL = "https://raw.githubusercontent.com/Daumur/Menu/Developp/app/src/main/java/com/example/menu/";
 
-    @GET("dogs_data.json")
-    Call<List<Chiens>> GetChien();
+    @GET("Destiny.json")
+    Call<List<Arme>> GetArme();
 }

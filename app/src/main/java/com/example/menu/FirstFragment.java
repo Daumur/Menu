@@ -11,14 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import java.util.List;
-import java.util.ArrayList;
 
 
 
 public class FirstFragment extends Fragment {
 
-    List<ModelListView> tennisList = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

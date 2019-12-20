@@ -20,17 +20,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/item_titre"
+            android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ddd"/>
         <TextView
-            android:id="@+id/item_age"
+            android:id="@+id/item_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ddd"/>
         <TextView
-            android:id="@+id/item_race"
+            android:id="@+id/item_diff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ddd"/>
