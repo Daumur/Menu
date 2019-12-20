@@ -13,5 +13,9 @@
             android:id="@+id/nav_third_fragment"
             android:icon="@drawable/ic_three"
             android:title="@string/Fragment_3" />
+        <item
+            android:id="@+id/nav_four_fragment"
+            android:icon="@drawable/ic_one"
+            android:title="@string/Fragment_4"/>
     </group>
 </menu>

@@ -1,13 +1,15 @@
-package com.example.progmobile;
+package com.example.menu;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.recyclerview.widget.RecyclerView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Chiens> values;
@@ -18,10 +20,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtHeader;
+        public TextView txtage;
+        public TextView txtrace;
+        public ImageView txtImage;
 
         public ViewHolder(View v) {
             super(v);
-            txtHeader = (TextView) v.findViewById(R.id.item_titre);
+            txtImage = v.findViewById(R.id.item_image);
+            txtHeader = v.findViewById(R.id.item_titre);
+            txtage = v.findViewById(R.id.item_age);
+            txtrace = v.findViewById(R.id.item_race);
         }
     }
 
@@ -36,31 +44,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<Chiens> myDataset) {
+    MyAdapter(List<Chiens> myDataset) {
         values = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         // create a new view
-        LayoutInflater inflater = LayoutInflater.from(
-                parent.getContext());
-        View v =
-                inflater.inflate(R.layout.item, parent, false);
-        // set the view's size, margins, paddings and layout parameters
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        return new ViewHolder(view);
     }
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         final Chiens chien = values.get(position);
-        holder.txtHeader.setText(chien.getName());
+        Picasso.get().load(chien.getImgURL()).into(holder.txtImage);
+        holder.txtHeader.setText("Nom : " +chien.getName());
+        holder.txtage.setText("Age : " +chien.getage());
+        holder.txtrace.setText("Race : " +chien.getrace());
 
     }
 

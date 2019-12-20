@@ -1,4 +1,4 @@
-package com.example.progmobile;
+package com.example.menu;
 
 import java.util.List;
 
