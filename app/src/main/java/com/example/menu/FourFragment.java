@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,7 +58,7 @@ public class FourFragment extends Fragment {
             call.enqueue(new Callback<List<Arme>>() {
                 @Override
                 public void onResponse(Call<List<Arme>> call, Response<List<Arme>> response) {
-                    armeList =response.body();
+                    armeList = response.body();
                     creationList(armeList);
                 }
 
@@ -66,10 +67,9 @@ public class FourFragment extends Fragment {
                     Log.d("ERROR", "API ERROR");
                 }
             });
-        }
+            }
 
         void creationList(List<Arme> armeList) {
-
 
             Arme arme = new Arme();
             arme.setName("Le fardeau d'Izanagi");

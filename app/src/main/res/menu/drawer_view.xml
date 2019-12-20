@@ -3,19 +3,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_fragment"
-            android:icon="@drawable/ic_one"
+            android:icon="@drawable/un"
             android:title="@string/Fragment_1" />
         <item
             android:id="@+id/nav_second_fragment"
-            android:icon="@drawable/ic_two"
+            android:icon="@drawable/deux"
             android:title="@string/Fragment_2" />
         <item
             android:id="@+id/nav_third_fragment"
-            android:icon="@drawable/ic_three"
+            android:icon="@drawable/trois"
             android:title="@string/Fragment_3" />
         <item
             android:id="@+id/nav_four_fragment"
-            android:icon="@drawable/ic_one"
+            android:icon="@drawable/quatre"
             android:title="@string/Fragment_4"/>
+        <item
+            android:id="@+id/nav_five_fragment"
+            android:icon="@drawable/cinq"
+            android:title="@string/Fragment_5"/>
     </group>
 </menu>

@@ -117,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_four_fragment:
                 fragmentClass = FourFragment.class;
                 break;
+            case R.id.nav_five_fragment:
+                fragmentClass = FiveFragment.class;
+                break;
             default:
                 fragmentClass = FirstFragment.class;
         }

@@ -14,7 +14,25 @@
   {
     "imgURL" : "https://www.bungie.net/common/destiny2_content/screenshots/1891561814.jpg",
     "name": "Murmure du ver",
-    "difficulté": "Assault secret avec parcour",
+    "difficulté": "Assault secret avec parcours",
+    "type": "Munitions Lourdes"
+  },
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2018/09/Destiny-2-tueur-de-souhaits.jpg",
+    "name": "Tueur de souhait",
+    "difficulté": "Quête secrete",
+    "type": "Cinétique"
+  },
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2018/09/Destiny-2-seigneur-des-loups.jpg",
+    "name": "Seigneur des loups",
+    "difficulté": "Dropable",
+    "type": "Energétique"
+  },
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2018/10/destiny-2-maitre-du-tonerre.jpg",
+    "name": "Maître du tonnerre",
+    "difficulté": "Dropable",
     "type": "Munitions Lourdes"
   }
 ]

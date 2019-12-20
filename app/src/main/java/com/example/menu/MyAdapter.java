@@ -43,33 +43,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         notifyItemRemoved(position);
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
     MyAdapter(List<Arme> myDataset) {
         values = myDataset;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
-        // create a new view
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         final Arme arme = values.get(position);
         Picasso.get().load(arme.getImgURL()).into(holder.txtImage);
         holder.txtName.setText("Nom : " + arme.getName());
-        holder.txtType.setText("Age : " + arme.getType());
-        holder.txtDiff.setText("Race : " + arme.getDifficulté());
+        holder.txtType.setText("Type : " + arme.getType());
+        holder.txtDiff.setText("Moyen d'obtention : " + arme.getDifficulté());
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return values.size();

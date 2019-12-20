@@ -4,14 +4,14 @@ public class Data {
 
     public static String [] title = new String[]{
 
-            "Panda Yin",
-            "Couscous tajin",
-            "Paella Loco"
+            "Bo Bun",
+            "Couscous au boeuf",
+            "Bachalhau"
     };
 
     public static int[] picturePath = new int[]{
-            R.drawable.ic_one,
-            R.drawable.ic_two,
-            R.drawable.ic_three
+            R.drawable.bo_bun,
+            R.drawable.couscous,
+            R.drawable.bachalhau,
     };
 }

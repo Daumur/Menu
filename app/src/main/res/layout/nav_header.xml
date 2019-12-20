@@ -11,9 +11,10 @@
     android:gravity="bottom">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:src="@mipmap/ic_launcher_round"/>
+        android:layout_width="109dp"
+        android:layout_height="match_parent"
+        tools:src="@drawable/bachalhau" />
+
     <TextView
         android:layout_width="380dp"
         android:layout_height="56dp"
