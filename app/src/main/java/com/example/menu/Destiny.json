@@ -34,5 +34,11 @@
     "name": "Maître du tonnerre",
     "difficulté": "Dropable",
     "type": "Munitions Lourdes"
+  },
+  {
+    "imgURL" : "https://www.next-stage.fr/wp-content/uploads/2019/10/deestiny-2-ornement-pour-Wei-1024x683.jpg",
+    "name": "Le serment d'Eriana",
+    "difficulté": "Donnée",
+    "type": "Energétique"
   }
 ]
